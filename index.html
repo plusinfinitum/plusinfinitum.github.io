@@ -1,0 +1,423 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Service Showcase</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #080000;
+            color: rgb(245, 244, 249);
+
+            
+        }
+        
+
+        #logo {
+            position: absolute;
+            top: 10px;
+            left: 120px; /* Adjust the left position as needed */
+            display: flex;
+            align-items: center;
+        }
+        
+        #logo img {
+            max-width: 100px; /* Adjust the max-width as needed */
+            height: auto;
+            margin-right: 10px; /* Add some margin between the logo and text */
+        }
+        
+        #logo span {
+            font-size: 1.2em; /* Adjust the font size as needed */
+            color: #fff; /* Set the text color to match your design */
+            
+        }
+        
+
+        header {
+            background-color: #040007;
+            color: rgb(239, 226, 243);
+            text-align: center;
+            padding: 1em;
+            font-family: 'Georgia', serif; 
+            position: relative;  
+        }
+        section {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            color: rgb(250, 247, 250);
+            background-color: #0e0e0e;
+            box-shadow: 0 0 10px rgba(247, 245, 248, 0.1);
+            border-radius: 5px;
+            font-family: 'Georgia', serif;
+        }
+
+        .service-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            
+        }
+        .headimage img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .service {
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            color: rgb(19, 18, 19);
+            background-color: rgb(248, 244, 244);
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+            font-family: 'Georgia', serif;
+        }
+
+        .service:hover {
+            transform: scale(1.05);
+        }
+
+        .service img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        .Get-Started {
+            background-image: url('C:\Users\priya\OneDrive\Desktop\Plus Infinitum\Logo\purple.jpg');
+            background-size: cover; /* Adjust as needed */
+            background-position: center; /* Adjust as needed */
+            background-repeat: no-repeat;
+            color: rgb(250, 248, 250);
+            padding: 40px 20px;
+        }
+
+        
+        .why-choose-us {
+            background-color: #280239;
+            color: rgb(255, 255, 255);
+            padding: 40px 20px;
+        }
+
+        .contact-us {
+            text-align: center;
+            color: rgb(255, 255, 255);
+            padding: 40px 20px;
+        }
+
+        footer {
+            background-color: rgb(0, 0, 0);
+            color: rgb(247, 237, 252);
+            text-align: center;
+            padding: 1em;
+            bottom: 0;
+            width: 100%;
+        }
+
+.animated-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+    color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    background-color: #000;
+}
+
+.animated-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%; /* Increase the width to accommodate 3 shades */
+    height: 100%;
+    background: linear-gradient(90deg, 
+        rgba(93, 88, 241, 0.2) 33.33%, 
+        rgba(217, 147, 249, 0.5) 66.66%, 
+        rgba(103, 250, 147, 0.2) 100%); /* Adjust the shades as needed */
+    transition: left 0.3s;
+}
+
+.animated-button:hover::before {
+    left: 100%;
+}
+
+
+#chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 300px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out; /* Add a transition for a smoother effect */
+
+}
+
+#chat-container:hover {
+    transform: scale(1.05); /* Add a scale effect on hover */
+}
+
+#chat-header {
+    background-color: #4d1d80;
+    color: rgb(255, 255, 254);
+    padding: 10px;
+    text-align: center;
+    cursor: grab; /* Add a grab cursor to indicate the chat is draggable */
+    font-family: 'Georgia', serif;
+}
+
+#chat-header:active {
+    cursor: grabbing; /* Change cursor when chat is being dragged */
+}
+
+#chat-body {
+    color: rgb(7, 0, 0);
+    padding: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#chat-input {
+    
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+#chat-send {
+    width: 100%;
+    background-color: #030d40;
+    color: rgb(253, 253, 253);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+}
+
+        
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div style="text-align: left; padding: 0px;">
+            <button id="toggle-menu" class="animated-button violet" onclick="toggleNavigation()">&#9776; Menu</button>
+        </div>
+        <div id="logo">
+            <img src="C:\Users\priya\OneDrive\Desktop\Plus Infinitum\Logo\PLUS INFINITUM logo.jpg" alt="Your Logo">
+            <span>PLUS INFINITUM</span>
+            <p> - Currently in pre-launch phase.</p>
+        </div>
+    </header>
+    
+
+    <div id="chat-container">
+        <div id="chat-header">Your Assistant</div>
+        <div id="chat-body"></div>
+        <input type="text" id="chat-input" placeholder="Type your message...">
+        <button id="chat-send" onclick="sendMessage()" class="animated-button violet">Send</button>
+    </div>
+
+    <nav id="navigation" style="display: none;">
+        <a href="about -services.html"><button class="animated-button violet" onclick="toggleSection('about')">About</button></a>
+        <button class="animated-button violet" onclick="toggleSection('services')">Services</button>
+        <a href="https://forms.gle/CHxBNaXE8pMWWPCk8"> <button class=animated-button violet" onclick="toggleSection('contact')">Contact</button></a>
+        <a href="https://forms.gle/797dtLF6cfFssbjJA"> <button class="animated-button violet" onclick="toggleSection('careers')">Careers</button></a>
+    </nav>
+    
+    <div class="headimage">
+        <img src="C:\Users\priya\OneDrive\Desktop\Plus Infinitum\Logo\Digital Consulting.jpg">
+    </div>
+    
+
+    <section>
+        <div class="About Plus Infinitum">
+            <h2>Welcome to Plus Infinitum: Your Strategic Digital Consulting Partner</h2>
+            <h3>Unlocking Growth Through Innovative Digital Solutions</h3>
+            <p>At Plus Infinitum, we are on the brink of redefining the digital consulting landscape. As a forthcoming powerhouse, we dedicate ourselves to empowering businesses of all sizes with cutting-edge technology solutions and strategic guidance. Our mission is clear: leverage our expertise across diverse digital domains to propel your business towards unparalleled success.</p>
+        </div>
+    </section>
+    <section>
+        
+        <div class="service-container">
+
+            <div class="Our Approach">
+                <h2>Our Approach</h2>
+                <p>We champion a collaborative and data-driven ethos, immersing ourselves in understanding your challenges, aspirations, and industry nuances. This deep dive allows us to craft bespoke solutions that seamlessly integrate with your existing infrastructure and processes. Our commitment is unwavering </p>
+                <h2>Tailored Solutions for Digital Triumph</h2>
+            </div>
+            
+            <div class="service">
+                <img src="C:\Users\priya\OneDrive\Desktop\Plus Infinitum\Portfolio\Vectors & Photos\Business Strategy & Transformation.jpg" alt="Service 1">
+                <h2>Business Strategy & Transformation</h2>
+                <p>Craft visionary digital strategies for success.</p>
+                <p>Optimize operations for efficiency and agility.</p>
+                <p>Tailor industry-specific solutions to your unique needs.</p>
+                <a href="seo.html"><button class="animated-button green">Learn More</button></a> 
+            </div>
+            
+
+            <div class="service">
+                <img src="C:\Users\priya\OneDrive\Desktop\Plus Infinitum\Portfolio\Vectors & Photos\Customer Experience.jpg" alt="Service 2">
+                <h2>Customer Experience (CX)</h2>
+                <p>Design winning customer acquisition strategies</p>
+                <p>Build engaging customer experiences for lasting brand advocacy.</p>
+                <p>Build engaging customer experiences for lasting brand advocacy.</p>
+                <a href="ppc.html"><button class="animated-button blue">Learn More</button></a>
+            </div>
+
+            <div class="service">
+                <img src="C:\Users\priya\OneDrive\Desktop\Plus Infinitum\Portfolio\Vectors & Photos\Marketing & Sales.avif" alt="Service 2">
+                <h2>Marketing & Sales</h2>
+                <p>Boost online presence organically with SEO strategies.</p>
+                <p>Execute targeted PPC campaigns for optimal ROI.</p>
+                <p>Harness social media marketing for heightened brand awareness.</p>
+                <p>Craft compelling content marketing campaigns that captivate your audience.</p>
+                <a href="smm.html"><button class="animated-button green">Learn More</button></a>
+            </div>
+
+            <div class="service">
+                <img src="C:\Users\priya\OneDrive\Desktop\Plus Infinitum\Portfolio\Vectors & Photos\Data & Analytics.jpg" alt="Service 2">
+                <h2>Data & Analytics</h2>
+                <p>Uncover actionable insights from your data for informed decision-making</p>
+                <p>Develop business intelligence dashboards for real-time visibility.</p>
+                <p>Leverage predictive analytics to forecast trends and optimize strategies</p>
+                <a href="cm.html"><button class="animated-button violet">Learn More</button></a>
+            </div>
+
+            <div class="service">
+                <img src="C:\Users\priya\OneDrive\Desktop\Plus Infinitum\Portfolio\Vectors & Photos\Technology & Operations.avif" alt="Service 2">
+                <h2>Technology & Operations</h2>
+                <p>Migrate infrastructure to the cloud for unparalleled scalability and security.</p>
+                <p>Ensure comprehensive cybersecurity and compliance measures.</p>
+                <p>Develop and integrate custom applications addressing your specific business needs.</p>
+                <a href="em.html"><button class="animated-button violet">Learn More</button></a>
+            </div>
+
+            <div class="service">
+                <img src="C:\Users\priya\OneDrive\Desktop\Plus Infinitum\Portfolio\Vectors & Photos\E-commerce solutions.jpg" alt="Service 2">
+                <h2>E-commerce solutions</h2>
+                <a href="rm.html"><button class="animated-button violet">Learn More</button></a>
+            </div>
+
+            <div class="service">
+                <img src="C:\Users\priya\OneDrive\Desktop\Plus Infinitum\Portfolio\Vectors & Photos\Mobile app development.jpg" alt="Service 2">
+                <h2>Mobile app development</h2>
+                <a href="wdd.html"><button class="animated-button violet">Learn More</button></a>
+            </div>
+
+            <div class="service">
+                <img src="C:\Users\priya\OneDrive\Desktop\Plus Infinitum\Portfolio\Vectors & Photos\Website development and design.avif" alt="Service 2">
+                <h2>Website development and design</h2>
+                <a href="wdd.html"><button class="animated-button violet">Learn More</button></a>
+            </div>
+        
+            <div class="service">
+                <img src="C:\Users\priya\OneDrive\Desktop\Plus Infinitum\Portfolio\Vectors & Photos\Social media management.jpg" alt="Service 2">
+                <h2>Social media management</h2>
+                <a href="wdd.html"><button class="animated-button violet">Learn More</button></a>
+            </div>
+            
+            
+            <!-- Add more service divs as needed -->
+        </div>
+    </section>
+
+    <section class="Get-Started">
+    <div class="feature">
+        <h2>Get Started with Plus Infinitum</h2>
+        <p>Embark on your digital transformation journey by contacting us for a free consultation. Let Plus Infinitum be your partner in unlocking your full potential in the digital age. We eagerly anticipate the opportunity to collaborate with you and drive your business to new heights.</p>
+    </div>
+    </section>
+
+    <section class="why-choose-us">
+        <h2>Why Choose Us</h2>
+        <div class="feature">
+            <p><strong>Data-Driven Approach:</strong> We analyze data to gain insights into your target audience, market trends, and competitor strategies, enabling us to make informed decisions and optimize your campaigns.</p>
+        </div>
+        
+
+        <div class="feature">
+            <p><strong>Transparency and Reporting:</strong> We provide detailed reports and analytics to keep you updated on campaign performance, allowing for transparent and measurable results tracking.</p>
+        </div>
+
+        <div class="feature">
+            <p><strong>Customization and Flexibility:</strong> We understand that every business has unique needs and goals. Our solutions are customized to align with your objectives, ensuring the most effective strategies for your success.</p>
+        </div>
+
+        <div class="feature">
+            <p><strong>Customer-Centric Approach:</strong> We prioritize customer satisfaction and strive to build long-term partnerships. Our team is dedicated to understanding your business requirements and delivering exceptional service.</p>
+        </div>
+
+        <div class="feature">
+            <p><strong>Continuous Improvement:</strong> We stay abreast of the latest digital marketing trends and advancements to ensure our clients benefit from the most effective and cutting-edge strategies.</p>
+        </div>
+
+    <!-- Repeat the structure for other features -->
+
+    </section>
+
+    <section class="contact-us">
+        <h2>Contact Us</h2>
+        <p>To elevate your digital presence, enhance brand awareness, and drive growth, connect with our marketing experts today. Let's embark on a journey of digital transformation and success together.</p>
+        <p>Reach out to us at <a href="mailto:info@plusinfinitum.com">info@plusinfinitum.com</a> or   <a href="tel:+91 9515490069">call us</a>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Plus Infinitum. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function sendMessage() {
+            var message = document.getElementById('chat-input').value;
+            if (message.trim() !== "") {
+                var chatBody = document.getElementById('chat-body');
+                var newMessage = document.createElement('p');
+                newMessage.textContent = "You: " + message;
+                chatBody.appendChild(newMessage);
+                // You can add logic here to handle the user's message and generate a bot response.
+                // For simplicity, the bot response is hardcoded in this example.
+                var botResponse = document.createElement('p');
+                botResponse.textContent = "Bot: Hi! Plus Infinitum is in Pre-Launch. For Inquires please reach out at info@plusinfinitum.com";
+                chatBody.appendChild(botResponse);
+                // Clear the input field after sending the message
+                document.getElementById('chat-input').value = "";
+                // Scroll to the bottom of the chat body to show the latest messages
+                chatBody.scrollTop = chatBody.scrollHeight;
+            }
+        }
+
+        
+            function toggleNavigation() {
+                var navigation = document.getElementById('navigation');
+                if (navigation.style.display === 'none' || navigation.style.display === '') {
+                    navigation.style.display = 'block';
+                } else {
+                    navigation.style.display = 'none';
+                }
+            }
+    </script>
+
+</body>
+</html>
+
+
