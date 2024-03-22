@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Strategy and Transformation</title>
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico">
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #080000;
+            color: rgb(245, 244, 249);
+        }
+        header {
+            background-color: #040007;
+            color: rgb(239, 226, 243);
+            text-align: center;
+            padding: 1em;
+            font-family: 'Georgia', serif; 
+            position: relative;  
+        }
+        section {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            color: rgb(247, 244, 247);
+            background-color: #240225;
+            box-shadow: 0 0 10px rgba(247, 245, 248, 0.1);
+            border-radius: 5px;
+            font-family: 'Georgia', serif;
+        }
+        .headimage img {
+            max-width: 500%;
+            border-radius: 5px;
+        }
+        .contact-us {
+            text-align: center;
+            color: rgb(255, 255, 255);
+            background-color: #0e0e0e;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(247, 245, 248, 0.1);
+            border-radius: 5px;
+            font-family: 'Georgia', serif;
+        }
+
+        footer {
+            background-color: rgb(0, 0, 0);
+            color: rgb(247, 237, 252);
+            text-align: center;
+            padding: 1em;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #logo {
+            position: absolute;
+            top: 10px;
+            left: 120px; /* Adjust the left position as needed */
+            display: flex;
+            align-items: center;
+        }
+        
+        #logo img {
+            max-width: 100px; /* Adjust the max-width as needed */
+            height: auto;
+            margin-right: 10px; /* Add some margin between the logo and text */
+        }
+        
+        #logo span {
+            font-size: 1.2em; /* Adjust the font size as needed */
+            color: #fff; /* Set the text color to match your design */
+            
+        }
+        
+        .animated-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border: 2px solid transparent;
+            color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            background-color: #000;
+        }
+        
+        .animated-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 300%; /* Increase the width to accommodate 3 shades */
+            height: 100%;
+            background: linear-gradient(90deg, 
+                rgba(93, 88, 241, 0.2) 33.33%, 
+                rgba(217, 147, 249, 0.5) 66.66%, 
+                rgba(103, 250, 147, 0.2) 100%); /* Adjust the shades as needed */
+            transition: left 0.3s;
+        }
+        
+        .animated-button:hover::before {
+            left: 100%;
+        }
+        
+
+    </style>
+</head>
+<body>
+<header>
+    <div style="text-align: left; padding: 0px;">
+        <button id="toggle-menu" class="animated-button violet" onclick="toggleNavigation()">&#9776; Menu</button>
+    </div>
+    <div id="logo">
+        <img src="C:\Users\priya\OneDrive\Desktop\Plus Infinitum\Logo\PLUS INFINITUM logo.jpg" alt="Your Logo">
+        <span>PLUS INFINITUM</span>
+    </div>
+</header>
+
+<nav id="navigation" style="display: none;">
+    <a href="index.html"><button class="animated-button violet" onclick="toggleSection('about')">About</button></a>
+    <a href="https://forms.gle/CHxBNaXE8pMWWPCk8"> <button class="animated-button violet" onclick="toggleSection('contact')">Contact</button></a>
+    <a href="https://forms.gle/797dtLF6cfFssbjJA"> <button class="animated-button violet" onclick="toggleSection('careers')">Careers</button></a>
+</nav>
+
+<div class="headimage">
+    <img src="">
+</div>
+
+<section>
+    <h1>Welcome to Plus Infinitum: Your Partner in Business Strategy & Transformation</h1>
+    <p>At Plus Infinitum, we're not just another consultancy—we're your trusted partner on the journey to success. With a relentless commitment to excellence and a passion for innovation, we empower organizations to unlock their full potential and achieve extraordinary results.</p>
+        
+    <h2>Our Approach:</h2>
+    <p> We believe that true success stems from a holistic approach to business strategy and transformation. That's why we take the time to understand your unique needs, challenges, and objectives, working closely with you every step of the way to develop tailored solutions that drive measurable impact.</p>
+        
+        <h3>Crafting Visionary Strategies:</h3>
+        <p>In today's fast-paced digital landscape, staying ahead requires more than just keeping up—it demands visionary thinking. </p>
+        <p>Our team of experts specializes in crafting forward-thinking digital strategies that transcend the ordinary, leveraging cutting-edge technologies and industry insights to create sustainable competitive advantages for our clients.</p>
+        
+        <h3>Optimizing Operations for Excellence:</h3>
+        <p>Efficiency and agility are the cornerstones of a thriving business. With our proven methodologies and best practices, we optimize operational processes to drive efficiency, minimize costs, and maximize performance. From streamlining workflows to implementing automation solutions, we help organizations adapt quickly to changing market dynamics and seize opportunities for growth.
+        
+        <h3>Tailored Solutions for Every Industry:</h3>
+        We understand that no two industries are alike. That's why we offer industry-specific solutions tailored to the unique needs and challenges of each sector. Whether you're in healthcare, finance, retail, manufacturing, or beyond, our team has the expertise and experience to deliver results that exceed your expectations.
+        
+        <h3>Collaborative Partnership:</h3>
+        At Plus Infinitum, we believe in the power of collaboration. We work closely with our clients as trusted advisors, listening to their needs, understanding their goals, and co-creating solutions that drive real, measurable impact. With a focus on transparency, accountability, and mutual success, we build lasting partnerships that stand the test of time.
+        
+        <h3>Continuous Innovation:</h3>
+        Innovation is at the heart of everything we do. We're constantly exploring new ideas, technologies, and methodologies to push the boundaries of what's possible and drive continuous improvement for our clients. By partnering with Plus Infinitum, you're not just investing in a service—you're investing in a future where possibilities are limitless.
+        
+        <h3>Experience the Plus Infinitum Difference:</h3>
+        Discover the difference that Plus Infinitum can make for your business. With our comprehensive suite of services, backed by industry-leading expertise and a proven track record of success, we're here to help you navigate the complexities of today's business landscape with confidence and clarity.
+        
+        Contact us today to learn more about how Plus Infinitum can help you achieve your business goals—because together, we're infinite.</h3>
+
+</section>
+
+<section class="contact-us">
+    <h2>Contact Us</h2>
+    <p>To elevate your digital presence, enhance brand awareness, and drive growth, connect with our marketing experts today. Let's embark on a journey of digital transformation and success together.</p>
+    <p>Reach out to us at <a href="mailto:admin@plusinfinitum.com">admin@plusinfinitum.com</a> or   <a href="tel:+91 ">call us</a>.</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Plus Infinitum Pvt. Ltd. All rights reserved.</p>
+</footer>
+
+<script>
+function toggleNavigation() {
+    var navigation = document.getElementById('navigation');
+    if (navigation.style.display === 'none' || navigation.style.display === '') {
+        navigation.style.display = 'block';
+    } else {
+        navigation.style.display = 'none';
+    }
+}
+</script>
+
+</body>
+</html>
