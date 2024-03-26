@@ -1,0 +1,399 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plus Infinitum Internships</title>
+    <link rel="icon" href="/favicon.ico"> 
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #080000;
+            color: rgb(245, 244, 249);
+        }
+        
+
+        #logo {
+            position: absolute;
+            top: 10px;
+            left: 120px; /* Adjust the left position as needed */
+            display: flex;
+            align-items: center;
+        }
+        
+        #logo img {
+            max-width: 100px; /* Adjust the max-width as needed */
+            height: auto;
+            margin-right: 10px; /* Add some margin between the logo and text */
+        }
+        
+        #logo span {
+            font-size: 1.2em; /* Adjust the font size as needed */
+            color: #fff; /* Set the text color to match your design */
+            
+        }
+        
+
+        header {
+            background-color: #040007;
+            color: rgb(239, 226, 243);
+            text-align: center;
+            padding: 1em;
+            font-family: 'Georgia', serif; 
+            position: relative;  
+        }
+        section {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            color: rgb(250, 249, 251);
+            background-color: #03132f;
+            box-shadow: 0 0 10px rgba(247, 245, 248, 0.1);
+            border-radius: 5px;
+            font-family: 'Georgia', serif;
+        }
+
+        .service-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background-color: #031432;
+            color: rgb(251, 250, 252);
+        }
+        .headimage img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .service {
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            color: rgb(235, 239, 241);
+            background-color: rgb(1, 11, 34);
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.795);
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+            font-family: 'Georgia', serif;
+        }
+
+        .service:hover {
+            transform: scale(1.05);
+        }
+
+        .service img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        .Get-Started {
+            background-image: url('C:\Users\priya\OneDrive\Desktop\Plus Infinitum\Logo\purple.jpg');
+            background-size: cover; /* Adjust as needed */
+            background-position: center; /* Adjust as needed */
+            background-repeat: no-repeat;
+            color: rgb(18, 12, 18);
+            padding: 40px 20px;
+        }
+
+        
+        .why-choose-us {
+            background-color: #022039;
+            color: rgb(255, 255, 255);
+            padding: 40px 20px;
+        }
+
+        .contact-us {
+            text-align: center;
+            color: rgb(235, 239, 241);
+            background-color: rgb(1, 11, 34);
+            padding: 40px 20px;
+        }
+
+        footer {
+            background-color: rgb(0, 0, 0);
+            color: rgb(247, 237, 252);
+            text-align: center;
+            padding: 1em;
+            bottom: 0;
+            width: 100%;
+        }
+
+.animated-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+    color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    background-color: #000;
+}
+
+.animated-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%; /* Increase the width to accommodate 3 shades */
+    height: 100%;
+    background: linear-gradient(90deg, 
+        rgba(38, 90, 175, 0.5) 50.66%, 
+        rgba(10, 34, 99, 0.5) 66.66%, 
+        rgba(42, 33, 96, 0.2) 10%); /* Adjust the shades as needed */
+    transition: left 0.3s;
+}
+
+.animated-button:hover::before {
+    left: 100%;
+}
+</style>
+</head>
+<body>
+    
+    <header>
+        <div style="text-align: left; padding: 0px;">
+            <button id="toggle-menu" class="animated-button violet" onclick="toggleNavigation()">&#9776; Menu</button>
+        </div>
+        <div id="logo">
+            <img src="https://github.com/plusinfinitum/plusinfinitum.github.io/blob/main/PLUS%20INFINITUM%20logo.jpg?raw=true" alt="Your Logo">
+            <span>PLUS INFINITUM</span>
+            
+        </div>
+    </header>
+
+    <nav id="navigation" style="display: none;">
+        <a href="index.html"><button class="animated-button violet" onclick="toggleSection('about')">About</button></a>
+        <a href="https://forms.gle/CHxBNaXE8pMWWPCk8"> <button class=animated-button violet" onclick="toggleSection('contact')">Contact</button></a>
+        <a href="https://forms.gle/797dtLF6cfFssbjJA"> <button class="animated-button violet" onclick="toggleSection('careers')">Careers</button></a>
+        <a href="internships.html"><button class="animated-button violet" onclick="toggleSection('about')">Internships</button></a>
+
+    </nav>
+    
+    <div class="headimage">
+        <img src="C:\Users\priya\Downloads\Quality products for quality life._page-0001.jpg">
+    </div>
+    
+
+    <section>
+        <div class="About Plus Infinitum">
+            <h1>Welcome to Plus Infinitum Internship Platform!</h1>
+            <h3>At Plus Infinitum Internship Platform, we're dedicated to helping you kickstart your career journey through valuable internship opportunities. Whether you're eager to gain hands-on experience, expand your skills, or explore different career paths, you've come to the right place.</h3>
+        </div>
+    </section>
+    <section>
+        
+        <div class="service-container">
+
+            <div class="Our Approach">
+                <h1>Unlock Your Potential:</h1>
+
+                <h2>Internships are more than just a stepping stone –</h2>
+                <p>they're a gateway to unlocking your full potential. Through internships, you'll have the opportunity to apply what you've learned in the classroom to real-world scenarios, setting the stage for future success.</p>
+
+                <h3>1. Explore Valuable Internship Opportunities:</h3>
+                <p>- Discover a wide range of internship opportunities to gain experience and enhance your skills.</p>
+                    
+                <h3>2. Simple Application Process:</h3>
+                <p>- Apply easily for internships, focusing on the valuable experience we offer.</p>
+                    
+                <h3>3. Skill Development:</h3>
+                <p>- Develop important skills and knowledge that will benefit your future career.</p>
+                    
+                <h3>4. Guidance and Support:</h3>
+                <p>- Receive helpful guidance to maximize your internship experience.</p>
+                    
+                <h3>5. Networking Opportunities:</h3>
+                <p>- Connect with professionals in your industry, building relationships that can support your career growth.</p>
+                    
+                <h3>6. Complement Your Studies:</h3>
+                <p>- Find internships that align with your academic interests, enhancing your learning outside the classroom.</p>
+                    
+                <h3>7. Personal and Professional Growth:</h3>
+                <p>- Experience personal and professional growth through meaningful internships, laying a strong foundation for your future endeavors.</p>
+                    
+                <h3>Our platform is here to help you find valuable internship opportunities, even if they're unpaid, to support your journey towards success.</h3>
+            </div>
+            <div class="service">
+                <h2>Python Development Internship</h2>
+                <p>Interns gain  hands-on experience in software development using the Python programming language. </p>
+                <p>Interns work on various projects ranging from web development, data analysis, machine learning, artificial intelligence, to automation tasks. Interns collaborate with experienced developers, learn Python libraries and frameworks such as Django, Flask, NumPy, and TensorFlow, and contribute to coding, testing, and debugging activities. </p>
+                <a href="https://forms.gle/YJ568fa4FGrgSTcF9"><button class="animated-button violet">Apply</button></a>
+            </div>
+
+            <div class="service">
+                <h2>Java Development Internship</h2>
+                <p>Interns gain practical experience in software development using the Java programming language. </p>
+                <p>Interns work on projects such as developing web applications, mobile apps, enterprise software, or backend systems. Interns collaborate with experienced developers, learn Java frameworks and tools like Spring Boot, Hibernate, and Maven, and contribute to coding, testing, and debugging activities. </p>
+                <a href="https://forms.gle/oJ5tgLNJWUXgR5yk9"><button class="animated-button violet">Apply</button></a>
+            </div>
+            
+            <div class="service">
+                <h2>Artificial Intelligence Internship</h2>
+                <p>Interns gain hands-on experience in developing and implementing AI solutions. </p>
+                <p>Interns work on projects such as machine learning algorithms, natural language processing applications, computer vision systems, and AI-driven software tools.</p>
+                <a href="https://forms.gle/4ceYd4ShEMBwNU938"><button class="animated-button violet">Apply</button></a>
+            </div>
+
+            <div class="service">
+                <h2>Web Development Internship</h2>
+                <p> Interns gain hands-on experience in designing, developing, and maintaining websites or web applications.</p>
+                <p>Interns may work with programming languages such as HTML, CSS, JavaScript, and frameworks like React, Angular, or Vue.js.</p>
+                <a href="https://forms.gle/aYrk99nYnf9pax3F8"><button class="animated-button green">Apply</button></a> 
+            </div>
+            
+
+            <div class="service">
+                <h2>Data Science Internship</h2>
+                <p> Interns assist in analyzing large datasets, building predictive models, and extracting insights from data using statistical and machine learning techniques. </p>
+                <p>Interns may work with programming languages like Python or R and tools like TensorFlow, PyTorch, or scikit-learn.</p>
+                <a href="https://forms.gle/JVF1fb4zu6p9T5YR9"><button class="animated-button blue">Apply</button></a>
+            </div>
+
+            <div class="service">
+                <h2>Business Intelligence (BI) Internship</h2>
+                <p> Interns in business intelligence gain hands-on experience in collecting, analyzing, and visualizing data to provide insights that support business decision-making.</p>
+                <p>Interns may work with data visualization tools like Tableau, Power BI, or Google Data Studio to create reports, dashboards, and interactive visualizations.</p>
+                <a href="https://forms.gle/t1s9nA4fB5pAi7a1A"><button class="animated-button green">Apply</button></a>
+            </div>
+
+            <div class="service">
+                <h2>Cybersecurity Internship</h2>
+                <p>Interns learn about cybersecurity principles, techniques, and tools to identify and mitigate security threats and vulnerabilities. </p>
+                <p>Tasks may include conducting security assessments, penetration testing, and implementing security measures.</p>
+                <a href="https://forms.gle/J2ZFjig8RmZVgM6S9"><button class="animated-button violet">Apply</button></a>
+            </div>
+
+            <div class="service">
+                <h2>Android App Development Internship</h2>
+                <p>Interns gain experience in developing mobile applications for iOS, Android, or cross-platform environments. </p>
+                <p>Interns may work with mobile app frameworks like React Native, Flutter, or Xamarin and collaborate with UX/UI designers and backend developers.</p>
+                <a href="https://forms.gle/MP3DvsXGgHTbd1Ky9"><button class="animated-button violet">Apply</button></a>
+            </div>
+
+            <div class="service">
+                <h2>Quality Assurance (QA) Internship</h2>
+                <p>Interns assist in testing software applications to ensure they meet quality standards and user requirements.</p>
+                <p>Tasks may include writing test cases, performing manual and automated testing, and reporting bugs or issues.</p>
+                <a href=""><button class="animated-button violet">Launching soon...</button></a>
+            </div>
+
+            <div class="service">
+                <h2>DevOps Internship</h2>
+                <p>Interns learn about DevOps principles and practices to streamline software development, deployment, and operations processes.</p>
+                <p>Interns may work with continuous integration/continuous deployment (CI/CD) pipelines, configuration management tools, and cloud platforms like AWS, Azure, or Google Cloud Platform.</p>
+                <a href=""><button class="animated-button violet">Launching soon...</button></a>
+            </div>
+
+            <div class="service">
+                <h2>Product Management Internship</h2>
+                <p>Interns assist product managers in defining product requirements, prioritizing features, and coordinating development efforts.</p>
+                <p>Interns may conduct market research, gather user feedback, and contribute to product strategy and roadmap planning.</p>
+                <a href="https://forms.gle/AFcXRbxKV5ieevEM7"><button class="animated-button violet">Apply</button></a>
+            </div>
+        
+            <div class="service">
+                <h2>UI/UX Design Internship</h2>
+                <p>Interns gain experience in user interface (UI) and user experience (UX) design principles to create intuitive and visually appealing software interfaces. </p>
+                <p>Interns may work with design tools like Adobe XD, Sketch, or Figma and collaborate with developers to implement designs.</p>
+                <a href="https://forms.gle/2XFHXXEc8HV77MLf8"><button class="animated-button violet">Apply</button></a>
+            </div>
+            
+            <div class="service">
+                <h2>Human Resources (HR) Internship</h2>
+                <p>Interns gain hands-on experience in recruitment, employee relations, and HR administration tasks such as sourcing candidates and conducting interviews. </p>
+                <p>Interns also assist in HR projects and contribute to employee engagement initiatives, fostering essential skills for future careers in HR management. </p>
+                <a href="https://forms.gle/1j57Ck9vchia4Zd17"><button class="animated-button violet">Apply</button></a>
+            </div>
+
+            <div class="service">
+                <h2>Project Coordinator Internship</h2>
+                <p>Interns gain hands-on experience in managing project activities, collaborating with stakeholders, and assisting with resource allocation and risk management. </p>
+                <p>Interns develop essential skills in organization, communication, and problem-solving, gaining exposure to project management methodologies applicable across diverse industries. </p>
+                <a href="https://forms.gle/5cyBvYWinnNb8Cgq9"><button class="animated-button violet">Apply</button></a>
+            </div>
+
+            <div class="service">
+                <h2>Graphic Design Internship</h2>
+                <p>Interns gain practical experience in creating visual concepts and communication materials.</p>
+                <p>Interns work on projects such as designing logos, branding materials, digital graphics, and print media.</p>
+                <a href="https://forms.gle/Hr8WSxbtyJtvfgm87"><button class="animated-button violet">Apply</button></a>
+            </div>
+            
+            <div class="service">
+                <h2>Digital Marketing Internship</h2>
+                <p>Interns gain practical experience in developing and implementing digital marketing strategies to promote products or services online. </p>
+                <p>Interns work on projects such as social media marketing, search engine optimization (SEO), content creation, email marketing, and digital advertising campaigns.</p>
+                <a href="https://forms.gle/8SicDn3iBw2M7DeD7"><button class="animated-button violet">Apply</button></a>
+            </div>
+            
+            <div class="service">
+                <h2>Content Writing Internship</h2>
+                <p>Interns gain hands-on experience in creating engaging and compelling content for various platforms and audiences.</p>
+                <p>Interns work on projects such as writing blog posts, articles, social media posts, website content, and marketing materials. </p>
+                <a href="https://forms.gle/cyDBUT8o6CDxqvQn9"><button class="animated-button violet">Apply</button></a>
+            </div>
+            
+            <div class="service">
+                <h2>Seo Analyst Internship</h2>
+                <p>Interns gain practical experience in optimizing websites and content to improve their visibility and ranking on search engine results pages (SERPs).</p>
+                <p>Interns work on projects such as keyword research, on-page optimization, link building, and SEO analysis.</p>
+                <a href="https://forms.gle/8NrMMX6uGgmQjtHy7"><button class="animated-button violet">Apply</button></a>
+            </div>
+            <!-- Add more service divs as needed -->
+        </div>
+    </section>
+
+    <section class="why-choose-us">
+        <h2>Why Choose Us</h2>
+        <div class="feature">
+            <p><strong>Diverse Opportunities:</strong>  We offer a wide range of internships across various industries, allowing you to explore different career paths and industries to find the perfect fit for your interests and aspirations.</p>
+        </div>
+        
+
+        <div class="feature">
+            <p><strong>Skill Development: </strong>Our internships provide hands-on experience and opportunities for skill development in areas such as project management, marketing, software development, and more. You'll gain practical skills that will enhance your resume and set you apart in today's competitive job market.</p>
+        </div>
+
+        <div class="feature">
+            <p><strong>Industry Connections:</strong> By joining our platform, you'll have the opportunity to connect with professionals, mentors, and peers within your field of interest. Networking is key to building a successful career, and our platform provides the perfect avenue to expand your network and make valuable connections.</p>
+        </div>
+
+        <div class="feature">
+            <p><strong>At Plus Infinitum, we believe that every internship experience, whether paid or unpaid, has the potential to shape your future and pave the way for your success. Join us and take the first step towards unlocking your full potential and building a rewarding career."</strong></p>
+
+    <!-- Repeat the structure for other features -->
+
+    </section>
+
+    <section class="contact-us">
+        <h2>Contact Us</h2>
+        <p>Reach out to us at <a href="mailto:admin@plusinfinitum.com">admin@plusinfinitum.com</a> or <a href="tel:+91 ">call us</a>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Plus Infinitum Pvt. Ltd. All rights reserved.</p>
+    </footer>
+    <script>
+            function toggleNavigation() {
+                var navigation = document.getElementById('navigation');
+                if (navigation.style.display === 'none' || navigation.style.display === '') {
+                    navigation.style.display = 'block';
+                } else {
+                    navigation.style.display = 'none';
+                }
+            }
+    </script>
+</body>
+</html>
+
+
